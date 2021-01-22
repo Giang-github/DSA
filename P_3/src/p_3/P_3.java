@@ -1,27 +1,27 @@
 
 package p_3;
 import java.util.Scanner;
-
+// Library to get the value the user input from the keyboard
 
 public class P_3 {
     
     public static void main(String[] args) {
-//Lấy giá trị người dùng nhập vào từ bàn phím
-                System.out.println("Nhập chuỗi bạn muốn đảo ngược : ");
+
+                System.out.println("Enter the string you want to reverse : ");
                 Scanner scan = new Scanner(System.in);
                 String input = scan.nextLine();
-                // Độ dài của mảng người dùng nhập vào
+                // The length of the array the user entered
                 int stackSize = input.length();
                 
                 Stack theStack = new Stack(stackSize);
-                // Đẩy các kí tự người dùng nhập vào trong stack
+                // Push the characters the user enters into the stack
                 for (int i = 0; i < input.length(); i++) {
-                        char my = input.charAt(i);// đẩy vào kí tự thứ index
+                        char my = input.charAt(i);
                         theStack.push(my);
                 } 
                 
-                System.out.println("Chuỗi bị đảo ngược là:");
-                    // Lấy ra giá trị trên đỉnh của stack và xóa nó đi
+                System.out.println("The reversed chain is :");
+                   // Get the value on top of the stack and delete it
                 while (!theStack.isEmpty()) {
                         char my = theStack.pop();         
                         System.out.print(my);

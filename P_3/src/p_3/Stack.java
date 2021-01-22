@@ -1,7 +1,7 @@
 
 package p_3;
 public class Stack {
-    //Khai báo 
+   //Declare 
     public int maxSize;
     public char[] stackArray;
     public int top;
@@ -10,15 +10,15 @@ public class Stack {
       stackArray = new char[maxSize];
       top = -1; 
    } 
-   // Thêm một giá trị vào trong stack
+  // Add a value to the stack
    public void push(char i) {
       stackArray[++top] = i;
    } 
-   // Lấy ra giá trị trên đỉnh và xóa nó đi
+  // Get the value on top and delete it
    public char pop() {
       return stackArray[top--];
    } 
-   // Lấy ra giá trị trên đỉnh mà không xóa nó đi
+   // Get the top value without deleting it
    public char top() {
       return stackArray[top];
    } 
